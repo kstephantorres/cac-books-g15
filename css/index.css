@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Smooch+Sans:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+body{
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+}
+main{
+    flex-grow: 1;
+}
+#navPrincipal{ 
+    position: fixed !important; 
+    width: 100%; 
+    z-index: 100;
+}
+.nav-text{
+    font-weight: 700;
+    font-size: 1.1rem;   
+}
+.banner{
+    max-height: 100vh;
+    overflow: hidden;
+    background-size: contain;
+    position: relative;
+}
+.banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+.banner img{
+    width: 100%;
+    object-fit: cover;
+}
+.banner article{
+    z-index: 1;
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+.tituloBanner {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.subtituloBanner{
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.botonBanner{
+    font-size: 1.2rem;
+    font-weight: 700;
+
+}
+#flecha{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        color: white;
+        cursor: pointer;
+}
+
+@media (max-width: 992px) {
+
+    .tituloBanner{
+        font-size: 2.5rem;
+    }
+    .subtituloBanner{
+        font-size: 1.5rem;
+    }
+    .botonBanner{
+        font-size: 1rem;
+    }
+    .banner{
+        height: 60vh;
+    }
+    .banner img{
+        height: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .tituloBanner{
+        margin-top: 15px;
+    }
+    .subtituloBanner{
+        display: none;
+    }
+    
+}
