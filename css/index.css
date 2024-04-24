@@ -64,6 +64,13 @@ main{
     font-weight: 700;
 
 }
+#flecha{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        color: white;
+        cursor: pointer;
+}
 
 @media (max-width: 992px) {
 
