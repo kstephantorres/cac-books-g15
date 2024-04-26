@@ -359,9 +359,9 @@ main{
 
 .main-login,
 .main-registro {
-  background-image: url('../img/cac-book-bg.avif');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url('../img/book-bg.jpg');
+  background-repeat: repeat-x;
+  background-size: auto 100%;
   background-position: center;
   display: flex;
   flex-direction: column;
