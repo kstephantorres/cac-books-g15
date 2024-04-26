@@ -261,3 +261,97 @@ main{
     }
     
 }
+
+
+/** REGISTRO / REGISTRO**/
+
+.main-login,
+.main-registro {
+  background-image: url('../img/cac-book-bg.avif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.registro,
+.login {
+  background-color: rgba(var(--bs-success-rgb), 0.75) !important;
+  width: 75%;
+  max-width: 600px;
+  margin: 105px auto 20px auto;
+  border-radius: 5px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 90vh; */
+  font-size: 1.2rem;
+
+  & form {
+    width: 100%;
+    /* padding: 0 50px; */
+  }
+}
+
+.registro-titulo,
+.login-titulo {
+  text-align: center;
+  color: #fff;
+}
+
+.form-reg {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.registro .terminos-condiciones,
+.login .terminos-condiciones {
+  padding-top: 10px;
+  color: #fff;
+}
+
+.registro input:not(.check, .boton),
+.login input:not(.check, .boton),
+select {
+  border: 2px solid #000;
+  border-radius: 25px;
+  color: #000;
+  font-size: 1.2rem;
+  height: 35px;
+  margin: 20px 0px;
+  outline: none;
+  padding: 0px 20px;
+  width: 75%;
+}
+
+.registro input[type='submit'],
+.login input[type='submit'] {
+  background-color: rgba(var(--bs-success-rgb), 1);
+  display: inline-block;
+  color: #fff;
+  height: 50px;
+  margin: 20px 10px;
+  padding: 0 20px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: 2px solid rgba(var(--bs-success-rgb), 1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+@media (max-width: 450px) {
+  .registro .terminos-condiciones,
+  .login .terminos-condiciones {
+    font-size: 0.6rem;
+  }
+  .registro input:not(.check, .boton),
+  .login input:not(.check, .boton),
+  select {
+    width: 100%;
+  }
+}
