@@ -401,18 +401,6 @@ main{
   width: 100%;
 }
 
-.error input:not(.check,.boton),.error select{
-  border: 1px solid #ff0000;
-}
-.error-text{
-  color: #e01f1f;
-  font-size: 18px;
-  display: block;
-  position: absolute;
-  top: 70%;
-  background-color:  rgba(var(--bs-success-rgb), 0.75);
-}
-
 .registro .terminos-condiciones,
 .login .terminos-condiciones {
   padding-top: 10px;
@@ -459,8 +447,3 @@ select {
     width: 100%;
   }
 }
-
-.form-reg {
-  position: relative; 
-}
-
