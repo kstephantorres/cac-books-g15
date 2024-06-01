@@ -436,6 +436,12 @@ select {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.error {
+  color: red;
+  display: none;
+  font-size: 1rem;
+}
+
 @media (max-width: 450px) {
   .registro .terminos-condiciones,
   .login .terminos-condiciones {
