@@ -46,14 +46,18 @@
 
           <h2>¿Qué libro estás buscando?</h2>
 
-          <form class="form-buscar-libro">
-            <input class="input-buscar" type="text" placeholder="Buscar libro...">
-            <input class="btn-buscar" type="button" value="Buscar">
+          <form class="form-buscar-libro" id="formBuscar">
+            <input class="input-buscar" type="text" id="inputBuscar" placeholder="Buscar libro...">
+            <input class="btn-buscar"  onclick="buscarLibros()" type="button" value="Buscar">
           </form>
-
+          <article id="tendencias">
+            <div id="results" class="row g-0">
+            </div>
+          </article>
+          
         </section>
 
-
+        
         <div class="division"></div>
 
         <section id="tendencias">
@@ -299,5 +303,6 @@
     </footer>
     <script src="https://kit.fontawesome.com/325ac4a1cd.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./assets/js/index.js"></script>
 </body>
 </html>
