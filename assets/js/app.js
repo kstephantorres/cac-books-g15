@@ -19,15 +19,18 @@ document.getElementById('nuevo-libro')?.addEventListener('submit', function (eve
         event.preventDefault()
         event.stopPropagation()
 
-        
+        var oMyBlob = new Blob(document.getElementById('imagen'), { type: "image/png, image/jpeg" })
 
         let data = {
             titulo: document.getElementById('titulo').value,
             autor: document.getElementById('autor').value,
             genero: document.getElementById('genero').value,
             editorial: document.getElementById('editorial').value,
+            imagen: document.getElementById('imagen'),
             descripcion: document.getElementById('descripcion').value,
         }
+        console.log(oMyBlob);
+        console.log(JSON.stringify(data));
 
         fetch('http://localhost:8080/books/libros', {
             method: "POST",
