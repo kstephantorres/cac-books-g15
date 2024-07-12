@@ -31,16 +31,20 @@
     <main id="inicio" class="main-login">
 
         <section class="login">
-            <form onsubmit="return validarForm()">
-                <h2 class="login-titulo" id="tituloFormulario">Login</h2>
+            <form class="needs-validation" novalidate>
+                <h2 class="login-titulo">Login</h2>
 
-                <div class="form-reg d-flex flex-column align-items-center">
-                    <input id="email" type="email" placeholder="Email" >
-                    <span id="emailError" class="error">Por favor, ingresa un correo electrónico válido.</span>
+                <div class="form-reg">
+                    <div class="input-group has-validation form-input">
+                        <input type="email" placeholder="Email" required>
+                        <div class="invalid-feedback error-info">Ingrese un email válido</div>
+                    </div>
                 </div>
-                <div class="form-reg d-flex flex-column align-items-center">
-                    <input  id="password" type="password" placeholder="Contraseña" >
-                    <span id="passwordError" class="error">La contraseña debe tener al menos 6 caracteres.</span>
+                <div class="form-reg">
+                    <div class="input-group has-validation form-input">
+                        <input type="password" placeholder="Contraseña" required>
+                        <div class="invalid-feedback error-info">Ingrese la contraseña</div>
+                    </div>
                 </div>
 
                 <div class="form-reg">
@@ -64,7 +68,7 @@
                         condiciones</a>
                     <a class="nav-link text-white mx-md-2" href="#">Preguntas frecuentes</a>
                     <a class="nav-link text-white mx-md-2" href="#">Ayuda</a>
-                    <a class="nav-link text-white mx-md-2" href="">
+                    <a class="nav-link text-white mx-md-2" href="./admin.html">
                         <button class="btn btn-dark nav-text"> Administrador Libros</button>
                     </a>
                 </div>
@@ -76,7 +80,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="./assets/js/validaciones.js"></script>
+
+    <script src="./assets/js/app.js"></script>
+
 </body>
 
 </html>
