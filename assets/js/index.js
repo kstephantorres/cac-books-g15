@@ -21,16 +21,13 @@ const mostrarResultados = (data) => {
     if (data) {
         data.forEach(item => {
             const libro = item;
-            // let imageUrl = '';
-            // if (libro.imageLinks) {
-            //     imageUrl = libro.imageLinks.extraLarge || libro.imageLinks.large || libro.imageLinks.medium || libro.imageLinks.small || libro.imageLinks.thumbnail;
-            // }
+          
             const libroElement = document.createElement('div');
             libroElement.className += "col-12 col-md-6 col-lg-4 d-flex justify-content-center"
             libroElement.innerHTML = `
                 <div class="card">
                     <div class="card__side card__side--front-1">
-                        ${libro.imageLinks ? `<img src="${libro.imageLinks.thumbnail}" alt="Portada de ${libro.titulo}">` : 'No hay imagen disponible'}
+                        ${libro.imagen ? `<img src="http://localhost:8080/books/${libro.imagen}" alt="Portada de ${libro.titulo}">` : 'No hay imagen disponible'}
                     </div>
                     <div class="card__side card__side--back card__side--back-1">
                         <div class="text">

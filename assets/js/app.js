@@ -13,45 +13,29 @@ Array.from(forms).forEach(form => {
     }, false)
 })
 
-document.getElementById('nuevo-libro')?.addEventListener('submit', function (event) {
-    if (document.getElementById('nuevo-libro').checkValidity()) {
-
-        event.preventDefault()
-        event.stopPropagation()
-
-        var oMyBlob = new Blob(document.getElementById('imagen'), { type: "image/png, image/jpeg" })
-
-        let data = {
-            titulo: document.getElementById('titulo').value,
-            autor: document.getElementById('autor').value,
-            genero: document.getElementById('genero').value,
-            editorial: document.getElementById('editorial').value,
-            imagen: document.getElementById('imagen'),
-            descripcion: document.getElementById('descripcion').value,
-        }
-        console.log(oMyBlob);
-        console.log(JSON.stringify(data));
-
-        fetch('http://localhost:8080/books/libros', {
-            method: "POST",
-
-            body: JSON.stringify(data),
+document.getElementById('uploadForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Previene el envío del formulario de forma tradicional
+    event.stopPropagation();
 
 
+
+
+    const formData = new FormData(this);
+
+    fetch('http://localhost:8080/books/libros', {
+        method: 'POST',
+        body: formData
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Respuesta del servidor:', data);
+            // alert('Datos subidos exitosamente. Ruta de la imagen: ' + data.filePath);
+            window.location.href = 'index.html';
         })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data);
-                alert('Formulario enviado exitosamente');
-                window.location.href = 'index.html';
-
-            })
-            .catch((error) => {
-                console.table('Error:', error);
-                console.error('Hubo un error al enviar el formulario');
-            });
-    };
-
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('Hubo un error al subir los datos.');
+        });
 });
 // fetch('https://books-api-production.up.railway.app/api/books')
 //     .then(response => response.json())
